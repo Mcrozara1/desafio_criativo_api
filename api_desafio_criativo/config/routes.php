@@ -1,6 +1,19 @@
 <?php
 
+require_once __DIR__ . '/Router.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+$router = new Router();
+
+
+$router->post('/login', 'AuthController@login');
+
+$router->get('/rota-protegida', 'AuthController@rotaProtegida');
+
+$router->dispatch();
+
 class Router {
+  
     private $routes = [];
     private $basePath = ''; //como a gente vai mexer na raiz do dominio,isso não prewcisa ser configurado 
 

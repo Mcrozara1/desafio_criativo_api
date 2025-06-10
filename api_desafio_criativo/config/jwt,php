@@ -1,0 +1,7 @@
+<?php
+return [
+    'secret_key' => 'chave_secreta',
+    'issuer' => 'api_desafio_criativo',
+    'audience' => 'frontend',
+    'expiration_time' => 3600 
+];
